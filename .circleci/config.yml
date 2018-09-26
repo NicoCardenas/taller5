@@ -38,15 +38,4 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
         
       # run tests!
-      - run: mvn integration-test
-      
-      machine:
-      java:
-        version: oraclejdk8
-
-    deployment:
-      staging:
-        branch: master
-        heroku: 
-          appname: pdsw-lab5
-
+      - run: mvn integration-test      
